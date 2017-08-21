@@ -16,7 +16,7 @@ app.get('/ui/style.css', function (req, res) {
 
 app.get('/article',function(req, res)
 {
-    res.sendFile("Article one is requested >> ");
+    res.sendFile('Article one is requested >> ');
 });
 
 
