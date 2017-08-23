@@ -1,13 +1,22 @@
 //console.log('Loaded!');
 var button = document.getElementById("counter");
 
-var counter = 0;
-button.onclick = function(req,res)
-{
+button.onclick = function(){
     
-    var request = xmlhttpRequest
-  
-    counter = counter +1;
-    var span = document.getElementById("counter");
-    span.innerHTML = counter.toString();
+    var request = new XMLhttpRequest();
+    
+    request.onReadystatechange = function(){
+      
+      if(request.readyState === XMLhttpRequest.DONE)
+        if(request.status === 200){
+            
+            var counter = request.responcesText;
+            var span = document.getElementById("counter");
+            span.innerHTML = counter.toString();
+            
+        }
+    };
+  request.open('GET',"http://chinmaykunte97@imad.hasura-app.io/counter",true);
+  request.send();
+    
 };
