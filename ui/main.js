@@ -17,6 +17,6 @@ button.onclick = function(){
         }
     };
   request.open('GET',"http://chinmaykunte97@imad.hasura-app.io/counter",true);
-  request.send();
+  request.send(null);
     
 };
