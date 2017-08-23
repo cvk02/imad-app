@@ -1,4 +1,4 @@
-//console.log('Loaded!');
+
 var button = document.getElementById("count");
 
 button.onclick == function(){
